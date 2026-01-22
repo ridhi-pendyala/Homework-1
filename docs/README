@@ -1,3 +1,6 @@
+RIDHI PENDYALA
+bnm8eq
+
 - make the whole sonnet an array - and use a random generator to parse through and stop at random word
 - separate the sonnet by spaces, "" BUT when comparing the inputted word with the sonnet word ignore all punctuation
 - need scanner to take in user input
