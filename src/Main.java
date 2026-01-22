@@ -27,8 +27,7 @@ public class Main {
             Random random = new Random();
 
             //sonnet broken up by spaces, but keeping punctuation attached to the closest word
-
-            String[] words = SONNET.split("\\s+");
+            String[] words = SONNET.split(" ");
 
 
 
@@ -37,7 +36,9 @@ public class Main {
                 int stop = random.nextInt(words.length);
 
                //removes the punctuation, but keeps apostrophe and -, which are used in the words
-                String correctWord = words[stop].replaceAll("[\\p{Punct}&&[^’'-]]", "");
+                //String correctWord = words[stop].replaceAll("[\\p{Punct}&&[^’'-]]", "");
+                Prithee test = new Prithee(words, stop);
+                String correctWord = test.getWord().replaceAll("[\\p{Punct}&&[^’'-]]", "");
 
                 for (int i = 0; i < stop; i++) {
                     System.out.print(words[i] + " ");
@@ -51,7 +52,7 @@ public class Main {
                     System.out.println("That was correct!\n");
                     correct++;
                 } else {
-                    System.out.println("That was incorrect. The correct word was: " + correctWord + "\n");
+                    System.out.println("\nThat was incorrect.\nThe correct word was: " + correctWord + "\n");
                     incorrect++;
                 }
 
